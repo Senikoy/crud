@@ -38,15 +38,16 @@ class ProductController extends Controller
             'price'=> 'required|numeric',
         ]);
         product::create($request->all());
-        return redirect()->route('products.index')->with('Success'. 'Product created succesfully.');
+        return redirect()->route('products.index')->with('success'. 'Product created succesfully.');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Product $product)
     {
         //
+        return view ('products.product', compact('product'));
     }
 
     /**

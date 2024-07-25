@@ -11,13 +11,17 @@
                         <a href="{{ route('products.create') }}" class="btn btn-info">Create Product</a>
                     </li>
                 </ol>
-
                 <div class="card shadow bg-secondary">
                     <div class="card-header py-3">
                         <h3 class="m-0 font-weight-bold text-primary">List of Products</h3>
                     </div>
                     <div class="card-body ">
                         <div class="table-responsive">
+                        @if (session ('success'))
+                        <div class="alert alert-success">
+                            {{session ('success') }}
+                        </div>
+                        @endif
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>

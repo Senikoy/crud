@@ -15,6 +15,15 @@
                         <h3 class="m-0 font-weight-bold text-primary">Edit Product</h3>
                     </div>
                     <div class="card-body bg-success">
+                    @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                            <li> {{$error}} </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
                         <form action="{{ route('products.update', $product->id) }}" method="POST">
                             @csrf
                             @method('PUT')
