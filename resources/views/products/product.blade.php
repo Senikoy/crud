@@ -8,7 +8,6 @@
                 <ol class="breadcrumb mb-4">
                     <li class="breadcrumb-item active">DETAILS OF THE COMPANY</li>
                 </ol>
-
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Product Details</h3>
@@ -22,7 +21,6 @@
                 </div>
             </div>
         </main>
-
         <footer class="py-4 bg-light mt-auto">
             <div class="container-fluid px-4">
                 <div class="d-flex align-items-center justify-content-between small">
